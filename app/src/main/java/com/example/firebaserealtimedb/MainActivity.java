@@ -19,8 +19,10 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText name,id,about,branch;
-    Button register;
+    private EditText name,id,about,branch;
+    private Button register;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         branch=findViewById(R.id.edt_txt_branch);
         about=findViewById(R.id.noemm);
         register=findViewById(R.id.btn_register);
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference databaseReference = firebaseDatabase.getReference();
+         firebaseDatabase = FirebaseDatabase.getInstance();
+         databaseReference = firebaseDatabase.getReference();
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 hashMap.put("Branch",getbranch);
                 hashMap.put("About",getabout);
                 databaseReference.child("Student")
+                        .child(getid)
                         .setValue(hashMap)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
