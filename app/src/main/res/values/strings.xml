@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Firebase RealTime DB</string>
+    <string name="branch">BRANCH</string>
+    <string name="id">ID</string>
+    <string name="name">NAME</string>
+    <string name="give_your_detail">Give Your Detail</string>
+    <string name="about">About</string>
+    <string name="register">Register</string>
+</resources>

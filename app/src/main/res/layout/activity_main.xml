@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/give_your_detail"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:id="@+id/edt_txt_name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/id"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:id="@+id/edt_txt_id"
+        android:autofillHints="username"
+        android:inputType="text" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/branch"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:id="@+id/edt_txt_branch"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/about"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:id="@+id/noemm"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginTop="15dp"
+        android:hint="@string/register"
+        android:id="@+id/btn_register"/>
+</LinearLayout>
